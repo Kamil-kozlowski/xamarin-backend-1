@@ -23,6 +23,8 @@ var mobile = azureMobileApps({
 // Import the files from the tables directory to configure the /tables endpoint
 mobile.tables.import('./tables');
 
+azureMobileApps.tables.add('Item'); 
+
 // Import the files from the api directory to configure the /api endpoint
 //! Un-comment if api folder exists
 // mobile.api.import('./api');
@@ -35,3 +37,10 @@ mobile.tables.initialize()
         app.use(mobile);    // Register the Azure Mobile Apps middleware
         app.listen(process.env.PORT || 3000);   // Listen for requests
     });
+
+    // var app = require('express')(); // Create an instance of an Express app
+
+    // var mobileApp = require('azure-mobile-apps')(); // Create an instance of a Mobile App with default settings
+    
+    // Create a table for 'Book' with default settings
+    
